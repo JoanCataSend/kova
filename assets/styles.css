@@ -154,7 +154,7 @@ a {
   position: relative;
   z-index: 2;
   max-width: 980px;
-  padding: 80px 24px 80px;
+  padding: 0px 24px 80px;
 }
 
 .hero h1 {
@@ -196,7 +196,17 @@ a {
   width: 22px;
   height: 22px;
   opacity: 0.7;
-  animation: bounce 1.6s infinite;
+  animation: bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* =========================
@@ -342,8 +352,10 @@ a {
 
 .gallery-card figcaption {
   padding: 16px;
-  color: var(--muted);
+  color: var(--foreground);
   font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.4;
 }
 
 /* =========================
@@ -405,7 +417,7 @@ a {
 ========================= */
 .footer {
   border-top: 1px solid var(--border);
-  background: var(--background);
+  background: var(--primary);
 }
 
 .footer-content {
@@ -419,7 +431,7 @@ a {
 }
 
 .footer p {
-  color: var(--muted);
+  color: var(--background);
   font-size: 0.95rem;
 }
 
@@ -441,6 +453,9 @@ a {
 
 
 @media (max-width: 620px) {
+  .scroll-indicator {
+    bottom: 95px;
+  }
   .navbar {
     position: relative;
     justify-content: center;
