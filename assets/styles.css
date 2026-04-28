@@ -606,6 +606,17 @@ a {
   .contact-form {
     padding: 0 8px;
   }
+  .team-grid {
+    gap: 26px;
+    padding: 0 10px;
+  }
+
+  .team-card {
+    flex: 0 0 100%;
+    max-width: 340px;
+    min-width: 0;
+    padding: 36px 28px;
+  }
 }
 
 /* ── Formulario de contacto ───────────────────────────────────────────────── */
